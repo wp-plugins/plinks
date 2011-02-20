@@ -4,13 +4,13 @@ Donate link: http://www.powie.de/
 Tags: links, blogroll, plugin, websnapr, shortcode
 Requires at least: 2.8
 Tested up to: 3.0.5
-Stable tag: "trunk"
+Stable tag: 0.9.0
 
 Displays a nice Linklist from a category at a page with the [plinks] shortcode. Uses websnapr to show preview images
 
 == Description ==
 
-STILL BETA 
+This Plugin shows a List from a Link Category on a Page using the [plinks] shortcode.
 
 = Including: =
 
