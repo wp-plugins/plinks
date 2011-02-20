@@ -10,7 +10,7 @@ Displays a nice Linklist from a category at a page with the [plinks] shortcode. 
 
 == Description ==
 
-STILL BETA 
+This Plugin shows a List from a Link Category on a Page using the [plinks] shortcode.
 
 = Including: =
 
