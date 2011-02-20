@@ -18,7 +18,6 @@ WebSnapr Preview Images
 
 == Installation ==
 
-ONLY USE THIS FOR LOCAL DEVELOPMENT
 1. Upload this Plugin to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Adjust settings
