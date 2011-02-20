@@ -29,7 +29,7 @@ WebSnapr Preview Images
 
 == Screenshots ==
 
-soon
+Usage on a page
 
 == Frequently Asked Questions ==
 
