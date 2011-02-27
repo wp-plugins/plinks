@@ -1,5 +1,5 @@
 === pLinks ===
-Contributors: Powie
+Contributors: PowieT
 Donate link: http://www.powie.de/
 Tags: links, blogroll, plugin, websnapr, shortcode
 Requires at least: 2.8
@@ -58,8 +58,4 @@ Post it at my Forum: [powie.de Forum](http://forum.powie.de)
 
 == Upgrade Notice ==
 
-Just Install.
-
-== To do ==
-
-Maybee Translations. Does someone wants to help?
+Simple install
