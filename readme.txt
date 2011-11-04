@@ -6,7 +6,7 @@ Requires at least: 2.8
 Tested up to: 3.2.1
 Stable tag: 0.9.1
 
-Displays a nice Linklist from a category at a page with the [plinks] shortcode. Uses websnapr to show preview images
+Displays a nice Linklist from a category at a page with the [plinks] shortcode. Uses PagePeeker to show preview images
 
 == Description ==
 
@@ -14,7 +14,7 @@ This Plugin shows a List from a Link Category on a Page using the [plinks] short
 
 = Including: =
 
-WebSnapr Preview Images
+PagePeeker Preview Images
 
 == Installation ==
 
