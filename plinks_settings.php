@@ -7,25 +7,23 @@ settings_fields( 'plinks-settings' );
 ?>
 <div id="poststuff">
 <div class="postbox">
-<h3>WebSnapr Settings</h3>
+<h3>Thumbnail Settings</h3>
 	<div class="inside">
     <table class="form-table">
         <tr valign="top">
-        <th scope="row">WebSnapr Key</th>
-        <td><input type="text" name="websnapr-key" value="<?php echo get_option('websnapr-key'); ?>" /></td>
-        </tr>
-
-        <tr valign="top">
-        <th scope="row">Show WebSnapr Images</th>
+        <th scope="row">Show Preview Images</th>
         <td><input type="checkbox" name="websnapr-show" id="websnapr-show" value="1" <?php checked(get_option('websnapr-show'), 1); ?> /></td>
         </tr>
 
         <tr valign="top">
-        <th scope="row">Websnapr Image Size</th>
+        <th scope="row">Thumbnail Image Size</th>
         <td>
         	<select name="websnapr-size">
-        		<option value="t" <?php if (get_option('websnapr-size')=='t') print('selected'); ?>>micro - 90x70</option>
-        		<option value="s" <?php if (get_option('websnapr-size')=='s') print('selected'); ?>>small - 202x152</option>
+        		<option value="t" <?php if (get_option('websnapr-size')=='t') print('selected'); ?>>tiny - 90x68px</option>
+        		<option value="s" <?php if (get_option('websnapr-size')=='s') print('selected'); ?>>small - 120x90px</option>
+        		<option value="m" <?php if (get_option('websnapr-size')=='m') print('selected'); ?>>medium - 200x150px</option>
+        		<option value="l" <?php if (get_option('websnapr-size')=='l') print('selected'); ?>>large - 400x300px</option>
+        		<option value="x" <?php if (get_option('websnapr-size')=='x') print('selected'); ?>>extra large - 480x380px</option>
         	</select>
         </td>
         </tr>

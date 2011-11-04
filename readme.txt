@@ -3,8 +3,8 @@ Contributors: PowieT
 Donate link: http://www.powie.de/
 Tags: links, blogroll, plugin, websnapr, shortcode
 Requires at least: 2.8
-Tested up to: 3.1.0
-Stable tag: 0.9.0
+Tested up to: 3.2.1
+Stable tag: 0.9.1
 
 Displays a nice Linklist from a category at a page with the [plinks] shortcode. Uses websnapr to show preview images
 
@@ -55,6 +55,9 @@ Post it at my Forum: [powie.de Forum](http://forum.powie.de)
 
 = 0.9.0 (19.02.2011) =
 * first version with all required stuff by me
+
+= 0.9.1 (04.11..2011) =
+* Websnapr removed -> PagePeeker used
 
 == Upgrade Notice ==
 

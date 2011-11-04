@@ -3,7 +3,7 @@
 Plugin Name: pLink
 Plugin URI: http://www.powie.de/plinks
 Description: Link Directory PageView
-Version: 0.9.0
+Version: 0.9.1
 License: Bearware 4,5%
 Author: Thomas Ehrhardt
 Author URI: http://www.powie.de
@@ -15,7 +15,7 @@ define( 'PL_PLUGIN_DIR', 'plinks');
 //create custom plugin settings menu
 add_action('admin_menu', 'plinks_create_menu');
 add_action('admin_init', 'plinks_register_settings' );
-add_action('wp_head', 'plinks_websnapr_header');
+//add_action('wp_head', 'plinks_websnapr_header');
 add_shortcode('plinks', 'plinks_show');
 //Hook for Activation
 register_activation_hook( __FILE__, 'plinks_activate' );
@@ -41,7 +41,7 @@ function plinks_create_menu() {
 
 function plinks_register_settings() {
 	//register settings
-	register_setting( 'plinks-settings', 'websnapr-key' );
+	//register_setting( 'plinks-settings', 'websnapr-key' );
 	register_setting( 'plinks-settings', 'websnapr-show' );
 	register_setting( 'plinks-settings', 'websnapr-size' );
 	//register_setting( 'plinks-settings', 'option_etc' );
@@ -69,9 +69,9 @@ function plinks_show( $atts ) {
 		$sc.=sprintf( '<div class="post">');
 		$sc.=sprintf( '<h2><a class="relatedlink" href="%s" target="%s">%s</a></h2>', $bm->link_url,$bm->link_target, __($bm->link_name) );
 		if($websnapr_show == 1) {
-			$sc.=sprintf( '<div style="float:left; padding-right:0.5em; padding-bottom:0.5em;">
-                           <script type="text/javascript">wsr_snapshot(\'%s\', \'%s\', \'%s\');</script></div> ',
-				$bm->link_url, $websnapr_key, $websnapr_size );
+			$sc.=sprintf( ' <div style="float:left; padding-right:0.5em; padding-bottom:0.5em;">
+                            <img src="http://pagepeeker.com/thumbs.php?size=%s&url=%s" border="0">
+                            </div> ',$websnapr_size,  $bm->link_url );
 		}
 		$sc.='<div class="postentry"><p>';
 		$sc.=sprintf ('%s<br />%s',$bm->link_description, nl2br($bm->link_notes));
@@ -92,6 +92,7 @@ function plinks_deactivate() {
 	// do not generate any output here
 }
 
+/*
 function plinks_websnapr_header() {
 	if (get_option('websnapr-show') == 1) {
 		$addhead = "\n<!-- pLinks Plugin -->\n";
@@ -99,5 +100,5 @@ function plinks_websnapr_header() {
 		$addhead.= "\n<!-- /pLinks Plugin -->\n";
 		print($addhead);
 	}
-}
+}*/
 ?>
