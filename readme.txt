@@ -45,7 +45,7 @@ Post a comment on [powie.de Forum](http://forum.powie.de))
 
 = Do you have other plugins?  =
 
-no.
+Yes! Take a look at my rcmovie-shortcode plugin.
 
 = Where do I post my feedback? =
 
@@ -56,7 +56,7 @@ Post it at my Forum: [powie.de Forum](http://forum.powie.de)
 = 0.9.0 (19.02.2011) =
 * first version with all required stuff by me
 
-= 0.9.1 (04.11..2011) =
+= 0.9.1 (04.11.2011) =
 * Websnapr removed -> PagePeeker used
 
 == Upgrade Notice ==
