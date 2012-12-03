@@ -1,9 +1,9 @@
 === pLinks ===
 Contributors: PowieT
 Donate link: http://www.powie.de/
-Tags: links, blogroll, plugin, websnapr, shortcode
+Tags: links, blogroll, plugin, pagepeeker, shortcode
 Requires at least: 2.8
-Tested up to: 3.3.2
+Tested up to: 3.5
 Stable tag: 0.9.1
 
 Displays a nice Linklist from a category at a page with the [plinks] shortcode. Uses PagePeeker to show preview images
