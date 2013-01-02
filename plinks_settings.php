@@ -1,5 +1,5 @@
 <div class="wrap">
-<div class="icon32"></div>
+<div class="icon32" id="icon-options-general"></div>
 <h2>pLinks Settings</h2>
 <form method="post" action="options.php">
 <?php
@@ -44,6 +44,14 @@ settings_fields( 'plinks-settings' );
 	shortcode: <b>[plinks category_name="Blogroll"]</b>. Use a category that exists! <br />
 	<br />
 	Happy Linking.
+    </div>
+</div>
+<div class="postbox">
+<h3>About</h3>
+	<div class="inside">
+		WWW: <a href="http://www.powie.de">powie.de</a> <br />
+		<a href="https://twitter.com/PowieT" class="twitter-follow-button" data-show-count="false" data-lang="de">@PowieT folgen</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     </div>
 </div>
 </div>

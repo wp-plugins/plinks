@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: pLink
+Plugin Name: Powie's pLinks
 Plugin URI: http://www.powie.de/plinks
-Description: Link Directory PageView
-Version: 0.9.1
+Description: Link directory pageview with pagepeeker preview
+Version: 0.9.2
 License: Bearware 4,5%
 Author: Thomas Ehrhardt
 Author URI: http://www.powie.de
