@@ -3,20 +3,23 @@
 Plugin Name: Powie's pLinks
 Plugin URI: http://www.powie.de/plinks
 Description: Link directory pageview with pagepeeker preview
-Version: 0.9.2
-License: Bearware 4,5%
+Version: 0.9.3
+License: GPLv2
 Author: Thomas Ehrhardt
 Author URI: http://www.powie.de
 */
 
 //Define some stuff
-define( 'PL_PLUGIN_DIR', 'plinks');
+define( 'PL_PLUGIN_DIR', dirname( plugin_basename( __FILE__ ) ) );
+load_plugin_textdomain( 'plinks', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
 //create custom plugin settings menu
 add_action('admin_menu', 'plinks_create_menu');
 add_action('admin_init', 'plinks_register_settings' );
 //add_action('wp_head', 'plinks_websnapr_header');
+//Shortcode
 add_shortcode('plinks', 'plinks_show');
+add_shortcode('pagepeeker', 'plinks_pagepeeker');
 //Hook for Activation
 register_activation_hook( __FILE__, 'plinks_activate' );
 //Hook for Deactivation
@@ -24,19 +27,8 @@ register_deactivation_hook( __FILE__, 'plinks_deactivate' );
 
 
 function plinks_create_menu() {
-	// create new top-level menu
-	#add_menu_page( __('HTML Title', EMU2_I18N_DOMAIN), EPT_PUGIN_NAME, 9, basename(__FILE__), 'ept_settings_page', plugins_url('/images/icon.png', __FILE__));
-	#add_submenu_page( basename(__FILE__), __("HTML Title", EMU2_I18N_DOMAIN), __("Menu title", EMU2_I18N_DOMAIN), 9, basename(__FILE__), EPT_PLUGIN_DIRECTORY.'/ept_settings_page.php' );
-	#add_submenu_page( basename(__FILE__), __("HTML Title2", EMU2_I18N_DOMAIN), __("Menu title 2", EMU2_I18N_DOMAIN), 9, basename(__FILE__), EPT_PLUGIN_DIRECTORY.'/ept_settings_page2.php' );
-
 	// or create options menu page
-	add_options_page('pLinks Setup','pLinks', 9,  PL_PLUGIN_DIR.'/plinks_settings.php');
-
-	// or create sub menu page
-	//$parent_slug="index.php";	# For Dashboard
-	//$parent_slug="edit.php";	# For Posts
-	// more examples at http://codex.wordpress.org/Administration_Menus
-	#add_submenu_page( $parent_slug, __("HTML Title", EMU2_I18N_DOMAIN), __("Menu title", EMU2_I18N_DOMAIN), 9, EPT_PLUGIN_DIRECTORY.'/ept_settings_page.php');
+	add_options_page(__('pLinks Setup'),__('pLinks Setup'), 9, PL_PLUGIN_DIR.'/plinks_settings.php');
 }
 
 function plinks_register_settings() {
@@ -45,6 +37,24 @@ function plinks_register_settings() {
 	register_setting( 'plinks-settings', 'websnapr-show' );
 	register_setting( 'plinks-settings', 'websnapr-size' );
 	//register_setting( 'plinks-settings', 'option_etc' );
+}
+
+function plinks_pagepeeker( $atts ){
+	//var_Dump($atts);
+	/*
+	   extract( shortcode_atts( array(
+	   'foo' => 'something',
+	   'bar' => 'something else',
+	   ), $atts ) );
+	   return "Hallo -> foo = {$foo}";
+	*/
+	$url = $atts['url'];
+	$size = $atts['size'];
+	if ($size == '') { $size = get_option('websnapr-size'); }
+	$sc = '<!-- pLinks Plugin PagePeeker Output -->';
+	$sc.=sprintf( '<img src="http://pagepeeker.com/thumbs.php?size=%s&url=%s" border="0" alt="preview" />',$size,  $url);
+	$sc.='<!-- /pLinks Plugin PagePeeker Output -->';
+	return $sc;
 }
 
 function plinks_show( $atts ) {

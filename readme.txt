@@ -4,54 +4,47 @@ Donate link: http://www.powie.de/
 Tags: links, blogroll, plugin, pagepeeker, shortcode
 Requires at least: 2.8
 Tested up to: 3.5
-Stable tag: 0.9.2
+Stable tag: 0.9.3
+License: GPLv2
 
-Displays a nice Linklist from a category at a page with the [plinks] shortcode. Uses PagePeeker to show preview images
+Displays a linklist at a page with the [plinks] shortcode with PagePeeker preview images. Provides a [pagepeeker] shortcode
 
 == Description ==
-
-This Plugin shows a List from a Link Category on a Page using the [plinks] shortcode.
+This Plugin shows a List from a Link Category on a Page using the [plinks] shortcode. You can provide the category as a parameter to choose which list is displayed.
+To view a single website preview image, provided by [PagePeeker](http://www.pagepeeker.com) you can use the [pagepeeker] shortcode.
 
 = Including: =
-
 PagePeeker Preview Images
 
 == Installation ==
-
 1. Upload this Plugin to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Adjust settings
 
 == Remove plugin ==
-
 1. Deactivate plugin through the 'Plugins' menu in WordPress
 2. Delete plugin through the 'Plugins' menu in WordPress
 
 == Screenshots ==
-
 1. Usage on a page
 
 == Frequently Asked Questions ==
-
-soon
+nothing now
 
 = How can I support you? =
-
 Post a comment on [powie.de Forum](http://forum.powie.de))
 
 = What is the plugin page?  =
-
-[Powie](http://www.powie.de)
-
-= Do you have other plugins?  =
-
-Yes! Take a look at my rcmovie-shortcode plugin.
+[Powie's Flying Dev Blog](http://www.powie.de)
 
 = Where do I post my feedback? =
-
 Post it at my Forum: [powie.de Forum](http://forum.powie.de)
 
 == Changelog ==
+= 0.9.3 (07.02.3023) =
+* Localization ready
+* de_DE Language
+* new pagepeeker shortcode
 
 = 0.9.2 (04.11.2011) =
 * Icon Fix
@@ -63,5 +56,4 @@ Post it at my Forum: [powie.de Forum](http://forum.powie.de)
 * first version with all required stuff by me
 
 == Upgrade Notice ==
-
 Simple install new version
