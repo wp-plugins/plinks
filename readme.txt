@@ -16,6 +16,9 @@ To view a single website preview image, provided by [PagePeeker](http://www.page
 = Including: =
 PagePeeker Preview Images
 
+= Support =
+Support Forum @ [powie.de](http://goo.gl/lfR7B)
+
 == Installation ==
 1. Upload this Plugin to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
