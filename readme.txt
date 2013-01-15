@@ -4,7 +4,7 @@ Donate link: http://www.powie.de/
 Tags: links, blogroll, plugin, pagepeeker, shortcode
 Requires at least: 2.8
 Tested up to: 3.5
-Stable tag: 0.9.3
+Stable tag: 0.9.4
 License: GPLv2
 
 Displays a linklist at a page with the [plinks] shortcode with PagePeeker preview images. Provides a [pagepeeker] shortcode
@@ -44,7 +44,10 @@ Post a comment on [powie.de Forum](http://forum.powie.de))
 Post it at my Forum: [powie.de Forum](http://forum.powie.de)
 
 == Changelog ==
-= 0.9.3 (07.02.3023) =
+= 0.9.4 (15.01.2013) =
+* New PagePeeker V2 API used
+
+= 0.9.3 (07.02.2013) =
 * Localization ready
 * de_DE Language
 * new pagepeeker shortcode

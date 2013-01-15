@@ -3,7 +3,7 @@
 Plugin Name: Powie's pLinks
 Plugin URI: http://www.powie.de/plinks
 Description: Link directory pageview with pagepeeker preview
-Version: 0.9.3
+Version: 0.9.4
 License: GPLv2
 Author: Thomas Ehrhardt
 Author URI: http://www.powie.de
@@ -11,6 +11,7 @@ Author URI: http://www.powie.de
 
 //Define some stuff
 define( 'PL_PLUGIN_DIR', dirname( plugin_basename( __FILE__ ) ) );
+define( 'PL_PAGEPEEKER_URL', 'http://free.pagepeeker.com/v2/thumbs.php?size=%s&url=%s');
 load_plugin_textdomain( 'plinks', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
 //create custom plugin settings menu
@@ -52,7 +53,7 @@ function plinks_pagepeeker( $atts ){
 	$size = $atts['size'];
 	if ($size == '') { $size = get_option('websnapr-size'); }
 	$sc = '<!-- pLinks Plugin PagePeeker Output -->';
-	$sc.=sprintf( '<img src="http://pagepeeker.com/thumbs.php?size=%s&url=%s" border="0" alt="preview" />',$size,  $url);
+	$sc.=sprintf( '<img src="'.PL_PAGEPEEKER_URL.'" border="0" alt="preview" />',$size,  $url);
 	$sc.='<!-- /pLinks Plugin PagePeeker Output -->';
 	return $sc;
 }
@@ -80,7 +81,7 @@ function plinks_show( $atts ) {
 		$sc.=sprintf( '<h2><a class="relatedlink" href="%s" target="%s">%s</a></h2>', $bm->link_url,$bm->link_target, __($bm->link_name) );
 		if($websnapr_show == 1) {
 			$sc.=sprintf( ' <div style="float:left; padding-right:0.5em; padding-bottom:0.5em;">
-                            <img src="http://pagepeeker.com/thumbs.php?size=%s&url=%s" border="0">
+                            <img src="'.PL_PAGEPEEKER_URL.'" border="0" />
                             </div> ',$websnapr_size,  $bm->link_url );
 		}
 		$sc.='<div class="postentry"><p>';
@@ -101,14 +102,4 @@ function plinks_activate() {
 function plinks_deactivate() {
 	// do not generate any output here
 }
-
-/*
-function plinks_websnapr_header() {
-	if (get_option('websnapr-show') == 1) {
-		$addhead = "\n<!-- pLinks Plugin -->\n";
-		$addhead.= '<script type="text/javascript" src="http://www.websnapr.com/js/websnapr.js"></script>';
-		$addhead.= "\n<!-- /pLinks Plugin -->\n";
-		print($addhead);
-	}
-}*/
 ?>
