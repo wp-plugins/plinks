@@ -1,15 +1,16 @@
 <?php
 /*
 Plugin Name: Powie's pLinks
-Plugin URI: http://www.powie.de/plinks
-Description: Link directory pageview with pagepeeker preview
-Version: 0.9.4
+Plugin URI: http://www.powie.de/wordpress/plinks
+Description: Link directory pageview with pagepeeker preview and shortcodes
+Version: 0.9.5
 License: GPLv2
 Author: Thomas Ehrhardt
 Author URI: http://www.powie.de
 */
 
 //Define some stuff
+define( 'PL_VERSION', '0.9.5');
 define( 'PL_PLUGIN_DIR', dirname( plugin_basename( __FILE__ ) ) );
 define( 'PL_PAGEPEEKER_URL', 'http://free.pagepeeker.com/v2/thumbs.php?size=%s&url=%s');
 load_plugin_textdomain( 'plinks', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
@@ -17,15 +18,18 @@ load_plugin_textdomain( 'plinks', false, dirname( plugin_basename( __FILE__ ) ) 
 //create custom plugin settings menu
 add_action('admin_menu', 'plinks_create_menu');
 add_action('admin_init', 'plinks_register_settings' );
-//add_action('wp_head', 'plinks_websnapr_header');
+
+//Style
+wp_enqueue_style( 'plinks', plugins_url('/plinks.css', __FILE__), array(), PL_VERSION, 'all' );
+
 //Shortcode
 add_shortcode('plinks', 'plinks_show');
 add_shortcode('pagepeeker', 'plinks_pagepeeker');
+
 //Hook for Activation
 register_activation_hook( __FILE__, 'plinks_activate' );
 //Hook for Deactivation
 register_deactivation_hook( __FILE__, 'plinks_deactivate' );
-
 
 function plinks_create_menu() {
 	// or create options menu page
@@ -77,7 +81,7 @@ function plinks_show( $atts ) {
 	$sc = '<!-- pLinks Plugin Output -->';
 	// Loop through each bookmark and print formatted output
 	foreach ( $bookmarks as $bm ) {
-		$sc.=sprintf( '<div class="post">');
+		$sc.=sprintf( '<div class="post plinks">');
 		$sc.=sprintf( '<h2><a class="relatedlink" href="%s" target="%s">%s</a></h2>', $bm->link_url,$bm->link_target, __($bm->link_name) );
 		if($websnapr_show == 1) {
 			$sc.=sprintf( ' <div style="float:left; padding-right:0.5em; padding-bottom:0.5em;">
