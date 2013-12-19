@@ -3,7 +3,7 @@ Contributors: PowieT
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=UST438WYW6HNJ
 Tags: links, blogroll, plugin, pagepeeker, shortcode
 Requires at least: 2.8
-Tested up to: 3.6
+Tested up to: 3.8
 Stable tag: 0.9.5
 License: GPLv2
 
