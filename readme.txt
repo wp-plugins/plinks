@@ -35,10 +35,12 @@ Use our Support Forum @ [powie.de](http://goo.gl/lfR7B) for fast help.
 1. Usage on a page
 
 == Frequently Asked Questions ==
-nothing now
+= Link Manger is nit available =
+Since Wordpress 3.5 and above the link manager is disabled by default on all new installations.
+You can reactivate it by installing this plugin: [Link-Manager](http://wordpress.org/plugins/link-manager/)
 
 = How can I support you? =
-Post a comment on [powie.de Forum](http://forum.powie.de))
+Post a comment on [powie.de Forum](http://forum.powie.de)
 
 = What is the plugin page?  =
 [Powie's Flying Dev Blog](http://www.powie.de)
