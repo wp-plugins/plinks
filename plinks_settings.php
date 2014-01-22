@@ -54,6 +54,13 @@ settings_fields( 'plinks-settings' );
 </div>
 
 <div class="postbox">
+<h3><?php _e('Link Manager', 'plinks') ?></h3>
+	<div class="inside">
+	<?php _e('With Wordpress 3.5 and above the Link Manager ist disabled by default. Install this plugin to reactivate it : <a href="http://wordpress.org/plugins/link-manager/" target="_blank">Link Manager</a>', 'plinks') ?>
+    </div>
+</div>
+
+<div class="postbox">
 <h3><?php _e('About', 'plinks') ?></h3>
 	<div class="inside" style="overflow:auto">
 		<div style="float:left;margin-right: 10px; display:inline;">
