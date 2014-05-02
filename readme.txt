@@ -14,9 +14,9 @@ This Plugin shows a List from a Link Category on a Page using the [plinks] short
 To view a single website preview image, provided by [PagePeeker](http://www.pagepeeker.com) you can use the [pagepeeker] shortcode.
 
 = Demos =
-[Demo 1](http://powie.de/links/)
-[Demo 2](http://www.jet-hangar.de/links/modell-hersteller/)
-[Demo 3](http://www.be-webspace.de/referenzen/)
+[Demo 1](http://powie.de/links/) -
+[Demo 2](http://www.jet-hangar.de/links/modell-hersteller/) -
+[Demo 3](http://www.be-webspace.de/referenzen/) 
 
 = Including: =
 * PagePeeker Preview Images 
