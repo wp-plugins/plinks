@@ -2,9 +2,9 @@
 Contributors: PowieT
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=UST438WYW6HNJ
 Tags: links, blogroll, plugin, pagepeeker, shortcode
-Requires at least: 2.8
+Requires at least: 3.0
 Tested up to: 3.8
-Stable tag: 0.9.6
+Stable tag: 0.9.7
 License: GPLv2
 
 Displays a linklist at a page with the [plinks] shortcode with PagePeeker preview images. Provides a [pagepeeker] shortcode
@@ -26,6 +26,10 @@ To view a single website preview image, provided by [PagePeeker](http://www.page
 
 = Support =
 Use our Support Forum @ [powie.de](http://goo.gl/lfR7B) for fast help.
+
+= Translations =
+Many thanks to our translators -
+sr_RS: borisad@webhostinghub.com
 
 == Installation ==
 1. Upload this Plugin to the `/wp-content/plugins/` directory
@@ -54,6 +58,9 @@ Post a comment on [powie.de Forum](http://forum.powie.de)
 Post it at my Forum: [powie.de Forum](http://forum.powie.de)
 
 == Changelog ==
+= 0.9.7 (30.06.2014) =
+* Added sr_RS translation
+
 = 0.9.6 (22.01.2014) =
 * Activation Info for Link Manager
 

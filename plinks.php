@@ -3,14 +3,14 @@
 Plugin Name: Powie's pLinks
 Plugin URI: http://www.powie.de/wordpress/plinks
 Description: Link directory pageview with pagepeeker preview and shortcodes
-Version: 0.9.6
+Version: 0.9.7
 License: GPLv2
 Author: Thomas Ehrhardt
 Author URI: http://www.powie.de
 */
 
 //Define some stuff
-define( 'PL_VERSION', '0.9.6');
+define( 'PL_VERSION', '0.9.7');
 define( 'PL_PLUGIN_DIR', dirname( plugin_basename( __FILE__ ) ) );
 define( 'PL_PAGEPEEKER_URL', 'http://free.pagepeeker.com/v2/thumbs.php?size=%s&url=%s');
 load_plugin_textdomain( 'plinks', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
